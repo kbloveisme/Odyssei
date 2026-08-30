@@ -69,7 +69,9 @@ function App() {
           <strong>{item.title}</strong>
           <span id={`${item.id}-detail`}>{item.detail}</span>
         </span>
-        <span className="move-label">{inCase ? 'Packed' : 'Select'}</span>
+        <span className="move-label">
+          {inCase ? 'Packed' : activeId === item.id ? 'Selected' : 'Select'}
+        </span>
       </button>
     </li>
   )
